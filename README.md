@@ -1,113 +1,213 @@
-# Internmatch
+🌐 InternMatch – Smart Internship Matching Platform
 
-**Internmatch** is a responsive web application built with Next.js + TypeScript. It serves as a platform to help interns and employers connect, with full-stack support, form handling, email delivery and a structured component layout including a navbar (with subtabs) and footer with contact information.
+InternMatch is a modern, responsive, full-stack web application built with Next.js + TypeScript, designed to help students discover internships and allow companies to post opportunities in a structured, efficient, and user-friendly way.
+Developed as part of Smart India Hackathon (SIH), it focuses on clean UI, fast navigation, and a scalable architecture.
 
-## Table of Contents
 
-- [Demo](#demo)  
-- [Features](#features)  
-- [Tech Stack](#tech-stack)  
-- [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
-  - [Running Locally](#running-locally)  
-- [Deployment](#deployment)  
-- [Folder Structure](#folder-structure)  
-- [Contributing](#contributing)  
-- [License](#license)  
 
-## Demo
+<div align="center">
+🚀 Live Demo : https://internmatch-variablex.vercel.app/
 
-*(Optional: Insert screenshot or link to live site here when deployed)*
 
-## Features
 
-- Responsive UI built with Next.js + TypeScript  
-- Navbar with subtabs and footer with contact & copyright  
-- Form handling with backend support (email delivery)  
-- Integration with institute-data (via ZIP/file import)  
-- Designed for interns and employers: user flows to register, view opportunities, post jobs, etc. *(Adjust based on actual functionality)*  
-- Clean folder structure with `components`, `hooks`, `lib`, `styles`, and `public` directories  
+</div>
 
-## Tech Stack
 
-- React / Next.js (TypeScript)  
-- CSS / Styled components / Tailwind (specify whichever you used)  
-- Node.js backend (or Next.js API routes) for email delivery / form submission  
-- Git + GitHub for version control and repo  
-- (Any other libraries: list them)  
+🧭 Overview
 
-## Getting Started
+InternMatch solves a common problem:
+➡️ Students struggle to find internships that match their skills.
+➡️ Companies struggle to filter relevant candidates.
 
-### Prerequisites
+This platform bridges that gap with smart filtering, intuitive UI, and easy job posting abilities.
 
-- Node.js (v14+ recommended)  
-- npm or yarn or pnpm (you appear to have `pnpm-lock.yaml`)  
-- Git  
+Whether you're a student exploring opportunities or a company searching for talent — InternMatch gives you a streamlined experience.
 
-### Installation & Setup
+✨ Key Features
+👩‍🎓 For Students
 
-```bash
-# Clone the repo
+Browse internships across domains
+
+Smart filtering based on skills, location, stipend, etc.
+
+Fast & responsive UI
+
+Bookmark/save opportunities (future enhancement)
+
+Simple authentication flow (optional integration)
+
+🏢 For Companies
+
+Post an internship in minutes
+
+Manage internship listings
+
+Structured data collection (title, skills, stipend, location)
+
+Email notifications (if configured)
+
+🔧 General Platform Features
+
+Fully responsive (mobile → desktop)
+
+Component-driven architecture (Next.js App Router)
+
+Smooth routing and minimal load times
+
+Clean navbar with subtabs
+
+Footer with contact, copyright, and quick links
+
+File/data import support (ZIP file for institute data)
+
+Ready for full-stack expansion
+
+
+
+
+
+🛠️ Tech Stack
+Category	Technology Used
+Frontend	Next.js 14, React 18, TypeScript
+Styling	CSS Modules / Tailwind (update if you used Tailwind)
+Backend	Next.js API Routes
+Email Support	Nodemailer / Resend / API (your choice)
+Deployment	Vercel
+Version Control	Git + GitHub
+
+
+
+
+
+📁 Project Folder Structure
+
+Internmatch/
+
+│
+
+├── app/                     # Next.js App Router pages & routes
+
+├── components/              # Reusable UI components
+
+├── hooks/                   # Custom React hooks
+
+├── lib/                     # Helper functions, utilities
+
+├── public/                  # Static assets (images, icons, etc.)
+
+├── styles/                  # Global + component-specific styling
+│
+├── .gitignore
+
+├── next.config.mjs
+
+├── package.json
+
+├── pnpm-lock.yaml
+
+├── tsconfig.json
+
+└── README.md
+
+
+
+
+
+
+🚀 Getting Started
+✔️ Prerequisites
+
+Make sure you have the following installed:
+
+Node.js (v16+ recommended)
+
+pnpm, npm, or yarn
+
+Git
+
+
+
+
+
+🔧 Installation
+
+1. Clone the Repository
 git clone https://github.com/Devansh-Sahu/Internmatch.git
 
-# Move into folder
+2. Navigate to the project
 cd Internmatch
 
-# Install dependencies
-pnpm install    # or `npm install` or `yarn install`, depending on what you use
-Running Locally
-bash
-Copy code
-# To run the development server
-pnpm dev        # or `npm run dev` / `yarn dev`
+3. Install dependencies
+pnpm install
 
-# Open http://localhost:3000 in your browser
-Building for Production
-bash
-Copy code
-pnpm build      # builds the application
-pnpm start      # starts production server
-Deployment
-This project is ready for deployment on platforms like Vercel (Next.js native support).
-To deploy:
 
-Push your code to GitHub (already done).
+(Or use npm install or yarn install depending on your preference)
 
-On Vercel, link your GitHub repository and follow prompts to deploy.
+▶️ Run Locally
 
-Configure environment variables (for email service, if any).
+Start the dev server:
 
-Each push to the main or master branch will trigger a new deployment.
+pnpm dev
 
-Folder Structure
-ruby
-Copy code
-Internmatch/
-├── app/                # Next.js app folder (if using Next.js 13+ app directory)
-├── components/         # UI components
-├── hooks/              # Custom React hooks
-├── lib/                # Library/util functions
-├── public/             # Public assets (images, favicon, etc.)
-├── styles/             # Global and modular CSS/SCSS files
-├── .gitignore  
-├── next.config.mjs     # Next.js configuration  
-├── package.json  
-├── pnpm-lock.yaml  
-├── tsconfig.json  
-└── postcss.config.mjs  
-(Adjust if your project uses a pages/ directory instead of app/ directory.)
 
-Contributing
+Now open:
+
+👉 http://localhost:3000
+
+Your app should now be running locally.
+
+🏗️ Build for Production
+pnpm build
+pnpm start
+
+
+This builds and starts the production server.
+
+
+
+
+
+☁️ Deployment (Vercel)
+
+InternMatch is optimized for deployment on Vercel.
+
+Deploy Steps:
+
+Go to https://vercel.com
+
+Create a new project
+
+Import your GitHub repository
+
+Select the repo: Internmatch
+
+Set environment variables (if using email backend)
+
+Click Deploy
+
+Vercel will auto-build and host your app.
+Every git push triggers an automatic redeployment.
+
+
+
+
+
+
+🤝 Contributing
+
 Contributions are welcome!
-Please follow these steps:
+
+Steps:
 
 Fork the repository
 
-Create your feature branch (git checkout -b feature/YourFeature)
+Create a feature branch
 
-Commit your changes (git commit -m 'Add some feature')
+git checkout -b feature/awesome-feature
 
-Push to the branch (git push origin feature/YourFeature)
 
-Open a Pull Request
+Commit changes
+
+Push the branch
+
+Create a Pull Request
